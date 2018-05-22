@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+		<relativePath />
+	</parent>
+	
+	<groupId>com.volvo.jvs.infratest</groupId>
+	<artifactId>infratest-client</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	
+	<name>JVS - Infrastructure Performance Test Tool - Client</name>
+	<description>Client for testing infrastructure performance tool</description>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>maven2.it.volvo.net</id>
+			<name>ADT Java EE Maven repository</name>
+			<url>http://maven2.it.volvo.net/content/repositories/adtjavaee</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>maven2.it.volvo.net</id>
+			<name>ADT Java EE Maven Snapshot repository Snapshot</name>
+			<url>http://maven2.it.volvo.net/content/repositories/adtjavaeeSnapshots</url>
+			<layout>default</layout>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.volvo.jvs.infratest</groupId>
+			<artifactId>infratest-restbeans</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<scm>
+		<connection>scm:git:ssh://git.it.volvo.net:29418/drs-java/jvs-mq-test</connection>
+		<developerConnection>scm:git:ssh://git.it.volvo.net:29418/drs-java/jvs-mq-test</developerConnection>
+	</scm>
+</project>
